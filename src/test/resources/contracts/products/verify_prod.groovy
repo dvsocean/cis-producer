@@ -3,10 +3,10 @@ package contracts.products
 import org.springframework.cloud.contract.spec.Contract
 
 Contract.make {
-    description "should return product by name"
+    description "should return very first product"
 
     request {
-        url "/getProduct/1"
+        url "/getProduct"
         method "POST"
     }
 
@@ -16,8 +16,8 @@ Contract.make {
             contentType "application/json"
         }
         body (
-                name: "Playstation",
-                price: 120
+                name: "Nintendo 64",
+                price: 65
         )
     }
 }
